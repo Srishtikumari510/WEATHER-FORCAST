@@ -1,5 +1,4 @@
 import streamlit as st
-import pandas as pd
 import numpy as np
 import joblib
 
@@ -26,13 +25,23 @@ if st.button("Predict Rain"):
     input_data = np.array([[temp, humidity, wind, cloud, pressure]])
     input_scaled = scaler.transform(input_data)
     pred = model.predict(input_scaled)[0]
-    proba = model.predict_proba(input_scaled)[0] if hasattr(model, "predict_proba") else None
+    
+    # Get probability if model supports it
+    if hasattr(model, "predict_proba"):
+        proba = model.predict_proba(input_scaled)[0]
+        rain_prob = proba[1] if pred == 1 else proba[0]
+    else:
+        rain_prob = None
     
     if pred == 1:
-        st.error(f"🌧️ **Rain expected!** (probability: {proba[1]:.2f})" if proba is not None else "🌧️ **Rain expected!**")
-        if proba is not None:
-            st.progress(int(proba[1]*100))
+        if rain_prob:
+            st.error(f"🌧️ **Rain expected!** (probability: {rain_prob:.2f})")
+            st.progress(int(rain_prob * 100))
+        else:
+            st.error("🌧️ **Rain expected!**")
     else:
-        st.success(f"☀️ **No rain expected!** (probability: {proba[0]:.2f})" if proba is not None else "☀️ **No rain expected!**")
-        if proba is not None:
-            st.progress(int(proba[0]*100))
+        if rain_prob:
+            st.success(f"☀️ **No rain expected!** (probability: {rain_prob:.2f})")
+            st.progress(int(rain_prob * 100))
+        else:
+            st.success("☀️ **No rain expected!**")
