@@ -1,0 +1,41 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb
+
+# Streamlit logs & config
+.streamlit/
+*.log
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Python egg metadata
+*.egg-info/
+*.egg
+
+# Model files (optional – uncomment if you want to exclude from git)
+# weather_model.pkl
+# scaler.pkl
+
+# Kaggle API key
+kaggle.json
