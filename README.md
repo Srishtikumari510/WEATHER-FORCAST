@@ -20,8 +20,6 @@
 - [Installation & Local Setup](#-installation--local-setup)
 - [Model Training](#-model-training)
 - [Deployment](#-deployment)
-- [Screenshots](#-screenshots)
-- [Future Work](#-future-work)
 - [Team](#-team)
 - [License](#-license)
 
