@@ -4,10 +4,11 @@
 [![GitHub stars](https://img.shields.io/github/stars/Srishtikumari510/Rain_Rain_When_will_u_come?style=social)](https://github.com/Srishtikumari510/Rain_Rain_When_will_u_come/stargazers)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat&logo=streamlit&logoColor=white)](https://streamlit.io)
 
 > **Rain or nah?** VibeRain tells you if it's going to rain and suggests outfit colors, movies, and music based on the weather. Built with Machine Learning + Streamlit – fully Gen‑Z approved 💅
 
-🔗 **Live Demo:** [viberain.streamlit.app](https://weather-forcast-ty7smv688xghdqc3euqnfa.streamlit.app/)
+🔗 **Live Demo:** [VibeRain on Streamlit](https://weather-forcast-ty7smv688xghdqc3euqnfa.streamlit.app/)
 
 ---
 
@@ -20,6 +21,8 @@
 - [Installation & Local Setup](#-installation--local-setup)
 - [Model Training](#-model-training)
 - [Deployment](#-deployment)
+- [Screenshots](#-screenshots)
+- [Future Work](#-future-work)
 - [Team](#-team)
 - [License](#-license)
 
